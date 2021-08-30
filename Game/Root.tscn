@@ -1,0 +1,1539 @@
+[gd_scene load_steps=76 format=2]
+
+[ext_resource path="res://olEleLeg3.png" type="Texture" id=1]
+[ext_resource path="res://olEletail.png" type="Texture" id=2]
+[ext_resource path="res://olEletrunk.png" type="Texture" id=3]
+[ext_resource path="res://olEleBody.png" type="Texture" id=4]
+[ext_resource path="res://olBase.png" type="Texture" id=5]
+[ext_resource path="res://olEleHead.png" type="Texture" id=6]
+[ext_resource path="res://olEleLeg4.png" type="Texture" id=7]
+[ext_resource path="res://olEleleg1.png" type="Texture" id=8]
+[ext_resource path="res://olEleLeg2.png" type="Texture" id=9]
+[ext_resource path="res://olHArrow.png" type="Texture" id=10]
+[ext_resource path="res://olArrow.png" type="Texture" id=11]
+[ext_resource path="res://olTop.png" type="Texture" id=12]
+[ext_resource path="res://neuropol x rg.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://Elephant.gd" type="Script" id=14]
+[ext_resource path="res://Root.gd" type="Script" id=15]
+[ext_resource path="res://MainScene.gd" type="Script" id=16]
+[ext_resource path="res://WorkScene.gd" type="Script" id=17]
+[ext_resource path="res://ShopScene.gd" type="Script" id=18]
+[ext_resource path="res://olWork.png" type="Texture" id=19]
+[ext_resource path="res://olShop.png" type="Texture" id=20]
+[ext_resource path="res://Interview.gd" type="Script" id=21]
+[ext_resource path="res://olinter.png" type="Texture" id=22]
+[ext_resource path="res://olintertrunk.png" type="Texture" id=23]
+[ext_resource path="res://olintertrunk.gd" type="Script" id=24]
+[ext_resource path="res://roots.gd" type="Script" id=25]
+[ext_resource path="res://speechBubble.png" type="Texture" id=26]
+[ext_resource path="res://speechBubble.gd" type="Script" id=27]
+[ext_resource path="res://olEleHead.gd" type="Script" id=28]
+[ext_resource path="res://ScoreCard.gd" type="Script" id=29]
+[ext_resource path="res://olButtonDown.png" type="Texture" id=30]
+[ext_resource path="res://olbuttonUp.png" type="Texture" id=31]
+[ext_resource path="res://olWorkingEle.png" type="Texture" id=32]
+[ext_resource path="res://olWorking.png" type="Texture" id=33]
+[ext_resource path="res://WorkingScene.gd" type="Script" id=34]
+[ext_resource path="res://signn.png" type="Texture" id=35]
+[ext_resource path="res://TradeScene.gd" type="Script" id=36]
+[ext_resource path="res://TradeScreen.png" type="Texture" id=37]
+[ext_resource path="res://tent3.png" type="Texture" id=38]
+[ext_resource path="res://tent2.png" type="Texture" id=39]
+[ext_resource path="res://tent1.png" type="Texture" id=40]
+[ext_resource path="res://CancelButton.png" type="Texture" id=41]
+[ext_resource path="res://BuyButton.png" type="Texture" id=42]
+[ext_resource path="res://BuyList1.gd" type="Script" id=43]
+[ext_resource path="res://olpot.png" type="Texture" id=44]
+[ext_resource path="res://olplant1.png" type="Texture" id=45]
+[ext_resource path="res://olBed.png" type="Texture" id=46]
+[ext_resource path="res://olFlag.png" type="Texture" id=47]
+[ext_resource path="res://olTreePack.png" type="Texture" id=48]
+[ext_resource path="res://olrock.png" type="Texture" id=49]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 22 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 21
+font_data = ExtResource( 13 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 19 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="StreamTexture" id=4]
+flags = 4
+load_path = "res://.import/olArrow.png-6d9406d182b63d38b09aabcbcbead808.stex"
+
+[sub_resource type="StreamTexture" id=5]
+flags = 4
+load_path = "res://.import/olHArrow.png-7391853ac68f55cdedc3b87267c86c0b.stex"
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=7]
+resource_name = "run"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("olEleleg1:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 53.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("olEleLeg3:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 49.4, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("olEleLeg2:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -29.4, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("olEleLeg4:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -48.3, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("olEleBody:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 5.2, 0.0 ]
+}
+
+[sub_resource type="StreamTexture" id=8]
+flags = 4
+load_path = "res://.import/speechBubble.png-b19c63ffb4a4a4f602aa050cfe41af2d.stex"
+
+[sub_resource type="DynamicFont" id=9]
+size = 9
+use_filter = true
+font_data = ExtResource( 13 )
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=11]
+size = 29
+font_data = ExtResource( 13 )
+
+[sub_resource type="Animation" id=12]
+resource_name = "Sleep"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("olEleLeg2:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 63.2 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("olEleLeg3:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, -25.3 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("olEleLeg4:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, -31.7 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("olEleHead:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 4.7, 4.7, 17.7 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("olEleleg1:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 68.9 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("olEleBody:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 35.4, 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("olEleBody:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -24, -24 ), Vector2( -24, -24 ), Vector2( -27, 14 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("olEleHead:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -60.2499, -64.9737 ), Vector2( -60.431, -50 ), Vector2( -60.431, -21 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("olEleleg1:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 53.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("olEleLeg3:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 49.4, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("olEleLeg2:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -29.4, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("olEleLeg4:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -48.3, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("olEleBody:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 5.2, 0.0 ]
+}
+
+[sub_resource type="DynamicFont" id=14]
+size = 24
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 24
+font_data = ExtResource( 13 )
+
+[sub_resource type="Animation" id=16]
+resource_name = "work1"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("box1:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 448, 200 ), Vector2( 1376, 392 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("box2:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 144, 160 ), Vector2( 864, 288 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("box3:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -184, 88 ), Vector2( 464, 208 ) ]
+}
+
+[sub_resource type="StreamTexture" id=17]
+flags = 4
+load_path = "res://.import/olArrow.png-6d9406d182b63d38b09aabcbcbead808.stex"
+
+[sub_resource type="StreamTexture" id=18]
+flags = 4
+load_path = "res://.import/olHArrow.png-7391853ac68f55cdedc3b87267c86c0b.stex"
+
+[sub_resource type="Animation" id=19]
+resource_name = "run"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("olEleleg1:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 53.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("olEleLeg3:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 49.4, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("olEleLeg2:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -29.4, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("olEleLeg4:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -48.3, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("olEleBody:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.1, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 5.2, 0.0 ]
+}
+
+[sub_resource type="SpriteFrames" id=20]
+animations = [ {
+"frames": [ ExtResource( 40 ) ],
+"loop": true,
+"name": "tent1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 39 ) ],
+"loop": true,
+"name": "tent2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 38 ) ],
+"loop": true,
+"name": "tent3",
+"speed": 5.0
+} ]
+
+[sub_resource type="StreamTexture" id=21]
+flags = 4
+load_path = "res://.import/BuyButton.png-1c1b0b8028f98a92082f37a9e5446c45.stex"
+
+[sub_resource type="DynamicFont" id=22]
+size = 48
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 27
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 32
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=25]
+size = 30
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=26]
+size = 21
+font_data = ExtResource( 13 )
+
+[node name="Root" type="Node"]
+script = ExtResource( 15 )
+
+[node name="roots" type="Node" parent="."]
+script = ExtResource( 25 )
+
+[node name="Interview" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 21 )
+
+[node name="bg" type="AnimatedSprite" parent="Interview"]
+position = Vector2( 480, 320 )
+frames = SubResource( 1 )
+
+[node name="olintertrunk" type="Sprite" parent="Interview"]
+position = Vector2( 488, 208 )
+rotation = 0.0122173
+texture = ExtResource( 23 )
+offset = Vector2( 0, 139 )
+script = ExtResource( 24 )
+
+[node name="Label" type="Label" parent="Interview"]
+margin_left = 128.0
+margin_top = 32.0
+margin_right = 820.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 2 )
+text = "Welcome Recruit. You will start full time tomorow"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arrow4" type="TextureButton" parent="Interview"]
+margin_left = 952.0
+margin_top = 312.0
+margin_right = 1115.0
+margin_bottom = 374.0
+rect_rotation = 180.0
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Interview"]
+margin_left = 160.0
+margin_top = 400.0
+margin_right = 852.0
+margin_bottom = 455.0
+custom_fonts/font = SubResource( 2 )
+text = "Welcome to elezon please submit your soul"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HomeScene" type="Node2D" parent="."]
+visible = false
+
+[node name="WorkScene" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 17 )
+
+[node name="Background" type="AnimatedSprite" parent="WorkScene"]
+position = Vector2( 480, 320 )
+frames = SubResource( 3 )
+
+[node name="Arrow2" type="TextureButton" parent="WorkScene"]
+margin_left = 952.0
+margin_top = 240.0
+margin_right = 1115.0
+margin_bottom = 302.0
+rect_rotation = 180.0
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arrow3" type="TextureButton" parent="WorkScene"]
+margin_left = 264.0
+margin_top = 304.0
+margin_right = 427.0
+margin_bottom = 366.0
+rect_rotation = 210.0
+rect_scale = Vector2( 0.75, 0.75 )
+texture_normal = SubResource( 4 )
+texture_pressed = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShopScene" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 18 )
+
+[node name="Background" type="AnimatedSprite" parent="ShopScene"]
+position = Vector2( 480, 320 )
+frames = SubResource( 6 )
+
+[node name="tent1" type="TextureButton" parent="ShopScene"]
+margin_left = 104.0
+margin_top = 32.0
+margin_right = 404.0
+margin_bottom = 332.0
+texture_normal = ExtResource( 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tent2" type="TextureButton" parent="ShopScene"]
+margin_left = 344.0
+margin_top = 136.0
+margin_right = 644.0
+margin_bottom = 436.0
+texture_normal = ExtResource( 39 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tent3" type="TextureButton" parent="ShopScene"]
+margin_left = 585.5
+margin_top = 40.0
+margin_right = 885.5
+margin_bottom = 340.0
+texture_normal = ExtResource( 38 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arrow" type="TextureButton" parent="ShopScene"]
+margin_left = 16.0
+margin_top = 184.0
+margin_right = 179.0
+margin_bottom = 246.0
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Npc" type="Sprite" parent="ShopScene"]
+position = Vector2( 824, 400 )
+
+[node name="olEleLeg2" type="Sprite" parent="ShopScene/Npc"]
+position = Vector2( -36.2499, -14.5 )
+rotation = 0.546288
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 9 )
+offset = Vector2( 20, -15 )
+
+[node name="olEleLeg4" type="Sprite" parent="ShopScene/Npc"]
+position = Vector2( 52.3749, -10.2533 )
+rotation = 0.546288
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 7 )
+offset = Vector2( -55, -10 )
+
+[node name="olEleBody" type="Sprite" parent="ShopScene/Npc"]
+position = Vector2( -24, -24 )
+rotation = 0.546288
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 4 )
+
+[node name="olEletail" type="Sprite" parent="ShopScene/Npc/olEleBody"]
+position = Vector2( 99.1778, -35.6439 )
+rotation = -0.523599
+texture = ExtResource( 2 )
+offset = Vector2( -98, 30 )
+
+[node name="olEleHead" type="Sprite" parent="ShopScene/Npc"]
+position = Vector2( -60.2499, -64.9737 )
+rotation = 0.0366519
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 6 )
+offset = Vector2( 45, 30 )
+script = ExtResource( 28 )
+
+[node name="olEletrunk" type="Sprite" parent="ShopScene/Npc/olEleHead"]
+position = Vector2( -44.4232, 39.2106 )
+rotation = 0.129154
+texture = ExtResource( 3 )
+offset = Vector2( 90, -10 )
+
+[node name="olEleleg1" type="Sprite" parent="ShopScene/Npc"]
+position = Vector2( -22.2773, -19.3212 )
+rotation = 0.546288
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 8 )
+offset = Vector2( 0, -10 )
+
+[node name="olEleLeg3" type="Sprite" parent="ShopScene/Npc"]
+position = Vector2( 88, 24 )
+rotation = 1.0664
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 1 )
+offset = Vector2( -80, -5 )
+
+[node name="anime" type="AnimationPlayer" parent="ShopScene/Npc"]
+playback_speed = 1.24
+anims/run = SubResource( 7 )
+
+[node name="bound" type="TextureButton" parent="ShopScene/Npc"]
+margin_left = -104.0
+margin_top = -96.0
+margin_right = 112.0
+margin_bottom = -16.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="speechBubble2" type="Sprite" parent="ShopScene/Npc"]
+position = Vector2( 0, -152 )
+texture = SubResource( 8 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="speech" type="Label" parent="ShopScene/Npc/speechBubble2"]
+margin_left = -56.0
+margin_top = -24.0
+margin_right = 72.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Hello New comer. 
+Click a tent to trade
+with someone"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="MainScene" type="Node2D" parent="."]
+script = ExtResource( 16 )
+
+[node name="Background" type="AnimatedSprite" parent="MainScene"]
+position = Vector2( 480, 320 )
+frames = SubResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Items" type="Node2D" parent="MainScene"]
+
+[node name="trees" type="Node2D" parent="MainScene/Items"]
+visible = false
+position = Vector2( -344, 152 )
+
+[node name="olTreePack7" type="Sprite" parent="MainScene/Items/trees"]
+position = Vector2( 1112, 205 )
+scale = Vector2( 1.372, 1.801 )
+texture = ExtResource( 48 )
+
+[node name="olTreePack8" type="Sprite" parent="MainScene/Items/trees"]
+position = Vector2( 744, 200 )
+scale = Vector2( 1.372, 1.801 )
+texture = ExtResource( 48 )
+
+[node name="olTreePack9" type="Sprite" parent="MainScene/Items/trees"]
+position = Vector2( 592, 200 )
+scale = Vector2( 1.372, 1.801 )
+texture = ExtResource( 48 )
+
+[node name="olTreePack" type="Sprite" parent="MainScene/Items/trees"]
+position = Vector2( 480, 293 )
+texture = ExtResource( 48 )
+
+[node name="olTreePack2" type="Sprite" parent="MainScene/Items/trees"]
+position = Vector2( 1184, 296 )
+texture = ExtResource( 48 )
+
+[node name="olTreePack3" type="Sprite" parent="MainScene/Items/trees"]
+position = Vector2( 944, 241 )
+scale = Vector2( 0.841, 1.429 )
+texture = ExtResource( 48 )
+
+[node name="olTreePack5" type="Sprite" parent="MainScene/Items/trees"]
+position = Vector2( 860, 248 )
+scale = Vector2( 0.841, 1.429 )
+texture = ExtResource( 48 )
+
+[node name="olTreePack6" type="Sprite" parent="MainScene/Items/trees"]
+position = Vector2( 688, 248 )
+scale = Vector2( 0.841, 1.429 )
+texture = ExtResource( 48 )
+
+[node name="olTreePack4" type="Sprite" parent="MainScene/Items/trees"]
+position = Vector2( 992, 303 )
+texture = ExtResource( 48 )
+
+[node name="rocks" type="Node2D" parent="MainScene/Items"]
+visible = false
+
+[node name="olrock" type="Sprite" parent="MainScene/Items/rocks"]
+position = Vector2( -128, 512 )
+scale = Vector2( 0.485796, 0.586842 )
+texture = ExtResource( 49 )
+offset = Vector2( 411.696, 54.5291 )
+
+[node name="olrock6" type="Sprite" parent="MainScene/Items/rocks"]
+position = Vector2( 424, 600 )
+scale = Vector2( 0.485796, 0.586842 )
+texture = ExtResource( 49 )
+offset = Vector2( 411.696, 54.5291 )
+
+[node name="olrock7" type="Sprite" parent="MainScene/Items/rocks"]
+position = Vector2( 48, 600 )
+scale = Vector2( 0.485796, 0.586842 )
+texture = ExtResource( 49 )
+offset = Vector2( 411.696, 54.5291 )
+
+[node name="olrock2" type="Sprite" parent="MainScene/Items/rocks"]
+position = Vector2( 40, 584 )
+scale = Vector2( 0.197443, 0.356579 )
+texture = ExtResource( 49 )
+offset = Vector2( 411.696, 54.5291 )
+
+[node name="olrock4" type="Sprite" parent="MainScene/Items/rocks"]
+position = Vector2( 208, 546.507 )
+scale = Vector2( 0.197443, 0.356579 )
+texture = ExtResource( 49 )
+offset = Vector2( 411.696, 54.5291 )
+
+[node name="olrock5" type="Sprite" parent="MainScene/Items/rocks"]
+position = Vector2( 720, 544 )
+scale = Vector2( 0.197443, 0.356579 )
+texture = ExtResource( 49 )
+offset = Vector2( 411.696, 54.5291 )
+
+[node name="olrock3" type="Sprite" parent="MainScene/Items/rocks"]
+position = Vector2( 713.5, 576 )
+scale = Vector2( 0.485796, 0.586842 )
+texture = ExtResource( 49 )
+offset = Vector2( 411.696, 54.5291 )
+
+[node name="Bed" type="Node2D" parent="MainScene/Items"]
+visible = false
+
+[node name="olBed" type="Sprite" parent="MainScene/Items/Bed"]
+position = Vector2( 448, 558 )
+rotation = -0.00349066
+scale = Vector2( 1.2, 1 )
+texture = ExtResource( 46 )
+
+[node name="FlagPole" type="Node2D" parent="MainScene/Items"]
+visible = false
+
+[node name="olFlag" type="Sprite" parent="MainScene/Items/FlagPole"]
+position = Vector2( 672, 368 )
+texture = ExtResource( 47 )
+
+[node name="Plant" type="Node2D" parent="MainScene/Items"]
+visible = false
+
+[node name="olplant1" type="Sprite" parent="MainScene/Items/Plant"]
+position = Vector2( 72, 464 )
+texture = ExtResource( 45 )
+
+[node name="olpot" type="Sprite" parent="MainScene/Items/Plant/olplant1"]
+position = Vector2( 8, 49 )
+texture = ExtResource( 44 )
+
+[node name="butSleep" type="TextureButton" parent="MainScene"]
+visible = false
+margin_left = 376.0
+margin_top = 168.0
+margin_right = 516.0
+margin_bottom = 248.0
+texture_normal = ExtResource( 31 )
+texture_pressed = ExtResource( 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MainScene/butSleep"]
+margin_left = 13.0
+margin_top = 21.0
+margin_right = 126.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Sleep"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arrow" type="TextureButton" parent="MainScene"]
+margin_left = 16.0
+margin_top = 184.0
+margin_right = 179.0
+margin_bottom = 246.0
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sign" type="TextureButton" parent="MainScene"]
+margin_left = 168.0
+margin_top = 418.0
+margin_right = 317.0
+margin_bottom = 596.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture_normal = ExtResource( 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arrow2" type="TextureButton" parent="MainScene"]
+margin_left = 952.0
+margin_top = 240.0
+margin_right = 1115.0
+margin_bottom = 302.0
+rect_rotation = 180.0
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Elephant" type="Sprite" parent="."]
+position = Vector2( 456, 520 )
+script = ExtResource( 14 )
+
+[node name="olEleLeg2" type="Sprite" parent="Elephant"]
+position = Vector2( -36.2499, -14.5 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 9 )
+offset = Vector2( 20, -15 )
+
+[node name="olEleLeg4" type="Sprite" parent="Elephant"]
+position = Vector2( 52.3749, -10.2533 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 7 )
+offset = Vector2( -55, -10 )
+
+[node name="olEleBody" type="Sprite" parent="Elephant"]
+position = Vector2( -24, -24 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 4 )
+
+[node name="olEletail" type="Sprite" parent="Elephant/olEleBody"]
+position = Vector2( 99.1778, -35.6439 )
+rotation = -0.0907571
+texture = ExtResource( 2 )
+offset = Vector2( -98, 30 )
+
+[node name="olEleHead" type="Sprite" parent="Elephant"]
+position = Vector2( -60.2499, -64.9737 )
+rotation = 0.0820305
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 6 )
+offset = Vector2( 45, 30 )
+
+[node name="olEletrunk" type="Sprite" parent="Elephant/olEleHead"]
+position = Vector2( -46.0398, 40.8328 )
+texture = ExtResource( 3 )
+offset = Vector2( 90, -10 )
+
+[node name="olEleleg1" type="Sprite" parent="Elephant"]
+position = Vector2( -22.2773, -19.3212 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 8 )
+offset = Vector2( 0, -10 )
+
+[node name="olEleLeg3" type="Sprite" parent="Elephant"]
+position = Vector2( 83.8393, -16.2465 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 1 )
+offset = Vector2( -80, -5 )
+
+[node name="anime" type="AnimationPlayer" parent="Elephant"]
+playback_speed = 1.24
+anims/Sleep = SubResource( 12 )
+anims/run = SubResource( 13 )
+
+[node name="bound" type="TextureButton" parent="Elephant"]
+margin_left = -120.0
+margin_top = -80.0
+margin_right = 96.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SleepTimer" type="Timer" parent="Elephant"]
+wait_time = 3.0
+
+[node name="speechBubble" type="Sprite" parent="."]
+visible = false
+position = Vector2( 424, 360 )
+texture = ExtResource( 26 )
+script = ExtResource( 27 )
+
+[node name="speech" type="Label" parent="speechBubble"]
+margin_left = -56.0
+margin_top = -24.0
+margin_right = 72.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Hello welcome my
+name is thomas
+i just moved here"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="speechBubble"]
+wait_time = 4.0
+
+[node name="ScoreCard" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 29 )
+
+[node name="olTop" type="Sprite" parent="ScoreCard"]
+position = Vector2( 480, 56 )
+texture = ExtResource( 12 )
+
+[node name="lblDay" type="Label" parent="ScoreCard"]
+margin_left = 752.0
+margin_top = 40.0
+margin_right = 832.0
+margin_bottom = 112.0
+custom_fonts/font = SubResource( 14 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Day:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dataMoney" type="Label" parent="ScoreCard"]
+margin_left = 15.0
+margin_top = 40.0
+margin_right = 168.0
+margin_bottom = 72.0
+custom_fonts/font = SubResource( 15 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "$0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lblthe" type="Label" parent="ScoreCard"]
+margin_left = 333.027
+margin_top = 40.0
+margin_right = 416.027
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 14 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "the"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dataStatus" type="Label" parent="ScoreCard"]
+margin_left = 403.0
+margin_top = 40.0
+margin_right = 612.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 14 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Unemployed"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dataName" type="Label" parent="ScoreCard"]
+margin_left = 179.0
+margin_top = 40.0
+margin_right = 312.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 14 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Thomas"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dataDay" type="Label" parent="ScoreCard"]
+margin_left = 832.0
+margin_top = 40.0
+margin_right = 927.0
+margin_bottom = 112.0
+custom_fonts/font = SubResource( 14 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WorkingScene" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 34 )
+
+[node name="olWorking" type="Sprite" parent="WorkingScene"]
+position = Vector2( 477, 331 )
+texture = ExtResource( 33 )
+
+[node name="box1" type="ColorRect" parent="WorkingScene"]
+margin_left = 1376.0
+margin_top = 392.0
+margin_right = 1448.0
+margin_bottom = 480.002
+rect_pivot_offset = Vector2( -1480, 40 )
+color = Color( 0.745098, 0.435294, 0.231373, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="box2" type="ColorRect" parent="WorkingScene"]
+margin_left = 864.0
+margin_top = 288.0
+margin_right = 936.001
+margin_bottom = 376.0
+rect_pivot_offset = Vector2( -1480, 40 )
+color = Color( 0.745098, 0.435294, 0.231373, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="box3" type="ColorRect" parent="WorkingScene"]
+margin_left = 464.0
+margin_top = 208.0
+margin_right = 536.0
+margin_bottom = 296.0
+rect_pivot_offset = Vector2( -1480, 40 )
+color = Color( 0.745098, 0.435294, 0.231373, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="olWorkingEle" type="Sprite" parent="WorkingScene"]
+position = Vector2( 504, 320 )
+texture = ExtResource( 32 )
+
+[node name="anime" type="AnimationPlayer" parent="WorkingScene"]
+anims/work1 = SubResource( 16 )
+
+[node name="Timer" type="Timer" parent="WorkingScene"]
+wait_time = 6.0
+
+[node name="TradeScene" type="Node2D" parent="."]
+visible = false
+position = Vector2( 432, -128 )
+script = ExtResource( 36 )
+
+[node name="TradeScreen" type="Sprite" parent="TradeScene"]
+position = Vector2( 48, 448 )
+texture = ExtResource( 37 )
+
+[node name="butExit" type="TextureButton" parent="TradeScene"]
+margin_left = 512.0
+margin_top = 736.0
+margin_right = 675.0
+margin_bottom = 798.0
+rect_rotation = 180.0
+texture_normal = SubResource( 17 )
+texture_pressed = SubResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Npc2" type="Sprite" parent="TradeScene"]
+position = Vector2( 200, 248 )
+scale = Vector2( -1, 1 )
+
+[node name="olEleLeg2" type="Sprite" parent="TradeScene/Npc2"]
+position = Vector2( -36.2499, -14.5 )
+rotation = 0.546288
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 9 )
+offset = Vector2( 20, -15 )
+
+[node name="olEleLeg4" type="Sprite" parent="TradeScene/Npc2"]
+position = Vector2( 52.3749, -10.2533 )
+rotation = 0.546288
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 7 )
+offset = Vector2( -55, -10 )
+
+[node name="olEleBody" type="Sprite" parent="TradeScene/Npc2"]
+position = Vector2( -24, -24 )
+rotation = 0.546288
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 4 )
+
+[node name="olEletail" type="Sprite" parent="TradeScene/Npc2/olEleBody"]
+position = Vector2( 99.1778, -35.6439 )
+rotation = -0.523599
+texture = ExtResource( 2 )
+offset = Vector2( -98, 30 )
+
+[node name="olEleHead" type="Sprite" parent="TradeScene/Npc2"]
+position = Vector2( -60.2499, -64.9737 )
+rotation = 0.0366519
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 6 )
+offset = Vector2( 45, 30 )
+script = ExtResource( 28 )
+
+[node name="olEletrunk" type="Sprite" parent="TradeScene/Npc2/olEleHead"]
+position = Vector2( -44.4232, 39.2106 )
+rotation = 0.129154
+texture = ExtResource( 3 )
+offset = Vector2( 90, -10 )
+
+[node name="olEleleg1" type="Sprite" parent="TradeScene/Npc2"]
+position = Vector2( -22.2773, -19.3212 )
+rotation = 0.546288
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 8 )
+offset = Vector2( 0, -10 )
+
+[node name="olEleLeg3" type="Sprite" parent="TradeScene/Npc2"]
+position = Vector2( 88, 24 )
+rotation = 1.0664
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 1 )
+offset = Vector2( -80, -5 )
+
+[node name="anime" type="AnimationPlayer" parent="TradeScene/Npc2"]
+playback_speed = 1.24
+anims/run = SubResource( 19 )
+
+[node name="bound" type="TextureButton" parent="TradeScene/Npc2"]
+margin_left = -104.0
+margin_top = -96.0
+margin_right = 112.0
+margin_bottom = -16.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="speechBubble2" type="Sprite" parent="TradeScene"]
+position = Vector2( 320, 320 )
+rotation = 3.14159
+scale = Vector2( -1, -1 )
+texture = SubResource( 8 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="dataInfo" type="Label" parent="TradeScene"]
+margin_left = 264.0
+margin_top = 296.0
+margin_right = 392.0
+margin_bottom = 355.0
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="tentSymbol" type="AnimatedSprite" parent="TradeScene"]
+position = Vector2( 453.5, 208 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 20 )
+animation = "tent1"
+
+[node name="finishBuy" type="TextureButton" parent="TradeScene"]
+margin_left = 120.0
+margin_top = 568.0
+margin_right = 268.0
+margin_bottom = 655.0
+texture_normal = SubResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="finishText" type="Label" parent="TradeScene"]
+margin_left = 136.0
+margin_top = 456.0
+margin_right = 493.0
+margin_bottom = 514.0
+custom_fonts/font = SubResource( 22 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="checker" type="Label" parent="TradeScene"]
+visible = false
+margin_left = 184.0
+margin_top = 353.0
+margin_right = 541.0
+margin_bottom = 461.0
+custom_fonts/font = SubResource( 23 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Are you sure
+ you want to 
+purchase"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="myMoney" type="Label" parent="TradeScene"]
+margin_left = -384.0
+margin_top = 692.0
+margin_right = -144.0
+margin_bottom = 750.0
+custom_fonts/font = SubResource( 24 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Bank"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dataMoney" type="Label" parent="TradeScene"]
+margin_left = -256.0
+margin_top = 692.0
+margin_right = -16.0
+margin_bottom = 750.0
+custom_fonts/font = SubResource( 24 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "$0"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="finishCancel" type="TextureButton" parent="TradeScene"]
+margin_left = 336.0
+margin_top = 568.0
+margin_right = 484.0
+margin_bottom = 655.0
+texture_normal = ExtResource( 41 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyList1" type="Node2D" parent="TradeScene"]
+script = ExtResource( 43 )
+
+[node name="op1" type="Label" parent="TradeScene/BuyList1"]
+margin_left = -376.0
+margin_top = 192.0
+margin_right = -154.0
+margin_bottom = 229.0
+custom_fonts/font = SubResource( 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Flower Pot	"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pr1" type="Label" parent="TradeScene/BuyList1"]
+margin_left = -120.0
+margin_top = 192.0
+margin_right = -32.0
+margin_bottom = 229.0
+custom_fonts/font = SubResource( 26 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "$35"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pr2" type="Label" parent="TradeScene/BuyList1"]
+margin_left = -120.0
+margin_top = 256.0
+margin_right = -32.0
+margin_bottom = 293.0
+custom_fonts/font = SubResource( 26 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "$55"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pr3" type="Label" parent="TradeScene/BuyList1"]
+margin_left = -120.0
+margin_top = 328.0
+margin_right = -32.0
+margin_bottom = 365.0
+custom_fonts/font = SubResource( 26 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "$80"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pr4" type="Label" parent="TradeScene/BuyList1"]
+margin_left = -120.0
+margin_top = 392.0
+margin_right = -32.0
+margin_bottom = 429.0
+custom_fonts/font = SubResource( 26 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "$140"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pr5" type="Label" parent="TradeScene/BuyList1"]
+margin_left = -120.0
+margin_top = 455.0
+margin_right = -32.0
+margin_bottom = 492.0
+custom_fonts/font = SubResource( 26 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "$65"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="op2" type="Label" parent="TradeScene/BuyList1"]
+margin_left = -376.0
+margin_top = 320.0
+margin_right = -154.0
+margin_bottom = 357.0
+custom_fonts/font = SubResource( 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Flag Poll"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="op3" type="Label" parent="TradeScene/BuyList1"]
+margin_left = -376.0
+margin_top = 256.0
+margin_right = -154.0
+margin_bottom = 293.0
+custom_fonts/font = SubResource( 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Bed"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="op4" type="Label" parent="TradeScene/BuyList1"]
+margin_left = -376.0
+margin_top = 384.0
+margin_right = -154.0
+margin_bottom = 421.0
+custom_fonts/font = SubResource( 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Tree pack"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="op5" type="Label" parent="TradeScene/BuyList1"]
+margin_left = -376.0
+margin_top = 448.0
+margin_right = -154.0
+margin_bottom = 485.0
+custom_fonts/font = SubResource( 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Rock pack"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buy1" type="TextureButton" parent="TradeScene/BuyList1"]
+margin_left = -40.0
+margin_top = 192.0
+margin_right = 108.0
+margin_bottom = 279.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 42 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buy2" type="TextureButton" parent="TradeScene/BuyList1"]
+margin_left = -40.0
+margin_top = 248.0
+margin_right = 108.0
+margin_bottom = 335.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 42 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buy3" type="TextureButton" parent="TradeScene/BuyList1"]
+margin_left = -43.0
+margin_top = 317.0
+margin_right = 105.0
+margin_bottom = 404.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 42 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buy4" type="TextureButton" parent="TradeScene/BuyList1"]
+margin_left = -40.0
+margin_top = 384.0
+margin_right = 108.0
+margin_bottom = 471.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 42 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buy5" type="TextureButton" parent="TradeScene/BuyList1"]
+margin_left = -43.0
+margin_top = 448.0
+margin_right = 105.0
+margin_bottom = 535.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 42 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Interview/Arrow4" to="Interview" method="exitInterview"]
+[connection signal="pressed" from="WorkScene/Arrow2" to="Elephant" method="moveRight"]
+[connection signal="pressed" from="WorkScene/Arrow3" to="WorkScene" method="workPressed"]
+[connection signal="pressed" from="ShopScene/tent1" to="ShopScene" method="tent1Pressed"]
+[connection signal="pressed" from="ShopScene/tent2" to="ShopScene" method="tent2Pressed"]
+[connection signal="pressed" from="ShopScene/tent3" to="ShopScene" method="tent3Pressed"]
+[connection signal="pressed" from="ShopScene/Arrow" to="Elephant" method="moveLeft"]
+[connection signal="pressed" from="MainScene/butSleep" to="MainScene" method="butSleepPressed"]
+[connection signal="pressed" from="MainScene/Arrow" to="MainScene" method="hideSleep"]
+[connection signal="pressed" from="MainScene/Arrow" to="Elephant" method="moveLeft"]
+[connection signal="pressed" from="MainScene/sign" to="MainScene" method="signPressed"]
+[connection signal="pressed" from="MainScene/Arrow2" to="MainScene" method="hideSleep"]
+[connection signal="pressed" from="MainScene/Arrow2" to="Elephant" method="moveRight"]
+[connection signal="LeftSide" from="Elephant" to="." method="sceneLeft"]
+[connection signal="RightSide" from="Elephant" to="." method="sceneRight"]
+[connection signal="animation_finished" from="Elephant/anime" to="Elephant" method="WakeUp"]
+[connection signal="pressed" from="Elephant/bound" to="Elephant" method="boundPressed"]
+[connection signal="timeout" from="Elephant/SleepTimer" to="Elephant" method="WakeUp"]
+[connection signal="timeout" from="speechBubble/Timer" to="speechBubble" method="whenDone"]
+[connection signal="timeout" from="WorkingScene/Timer" to="WorkingScene" method="workDone"]
+[connection signal="pressed" from="TradeScene/butExit" to="TradeScene" method="finishCancelPressed"]
+[connection signal="pressed" from="TradeScene/butExit" to="TradeScene" method="butExitPressed"]
+[connection signal="pressed" from="TradeScene/finishBuy" to="TradeScene" method="finishBuyPressed"]
+[connection signal="pressed" from="TradeScene/finishCancel" to="TradeScene" method="finishCancelPressed"]
+[connection signal="pressed" from="TradeScene/BuyList1/buy1" to="TradeScene/BuyList1" method="but1Pressed"]
+[connection signal="pressed" from="TradeScene/BuyList1/buy2" to="TradeScene/BuyList1" method="but2Pressed"]
+[connection signal="pressed" from="TradeScene/BuyList1/buy3" to="TradeScene/BuyList1" method="but3Pressed"]
+[connection signal="pressed" from="TradeScene/BuyList1/buy4" to="TradeScene/BuyList1" method="but4Pressed"]
+[connection signal="pressed" from="TradeScene/BuyList1/buy5" to="TradeScene/BuyList1" method="but5Pressed"]
